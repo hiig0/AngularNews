@@ -1,0 +1,7 @@
+- [ ] Implementar autenticação de usuário (Firebase/JWT)
+- [ ] Integração com API de notícias (NewsAPI)
+- [ ] Interface responsiva e navegação
+- [ ] Filtros personalizados
+- [ ] Funcionalidade de favoritos
+- [ ] Notificações push
+- [ ] Cache e performance offline

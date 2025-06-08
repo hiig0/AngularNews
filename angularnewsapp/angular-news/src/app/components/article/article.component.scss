@@ -1,0 +1,112 @@
+:host {
+  .article-card {
+    margin: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px 0;
+  }
+
+  .source-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    cursor: pointer;
+  }
+
+  .source-index {
+    font-weight: 600;
+    color: #5e72e4;
+    margin-right: 8px;
+  }
+
+  .source-name {
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 0.9rem;
+  }
+
+  .time-badge {
+    margin-left: 8px;
+    font-weight: 400;
+    --background: #e2e8f0;
+    --color: #4a5568;
+    font-size: 0.7rem;
+  }
+
+  .menu-button {
+    color: #a0aec0;
+    --padding-start: 0;
+    --padding-end: 0;
+    
+  }
+
+  .card-content {
+    padding: 0 16px;
+    cursor: pointer;
+  }
+
+  .article-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 8px 0 12px;
+    line-height: 1.4;
+  }
+
+  .article-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .article-description {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.5;
+    margin: 0 0 12px;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #edf2f7;
+    padding: 8px;
+    
+    ion-button {
+      --color: #718096;
+      --background-activated: rgba(113, 128, 150, 0.1);
+      margin: 0;
+      
+      ion-icon {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  :host {
+    .article-card {
+      margin: 8px;
+      border-radius: 10px;
+    }
+    
+    .article-image {
+      height: 150px;
+    }
+  }
+}

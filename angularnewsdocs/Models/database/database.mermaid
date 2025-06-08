@@ -1,0 +1,36 @@
+erDiagram
+    USERS {
+        INT id PK
+        VARCHAR username
+        VARCHAR email
+        VARCHAR password
+    }
+    FAVORITES {
+        INT id PK
+        INT user_id FK
+        VARCHAR article_url
+        DATETIME favorited_at
+    }
+    CATEGORIES {
+        VARCHAR name PK
+    }
+
+    USERS ||--o{ FAVORITES : "possui"
+    FAVORITES }o--|| USERS : "pertence a"
+    FAVORITES }o--|| CATEGORIES : "ref. categoria"
+    FAVORITES }o--|| ARTICLES : "ref. artigo" 
+
+    ARTICLES {
+        VARCHAR url PK
+        VARCHAR source_name
+        VARCHAR author
+        VARCHAR title
+        VARCHAR description
+        VARCHAR urlToImage
+        DATETIME publishedAt
+        VARCHAR content
+        VARCHAR category_name FK
+    }
+
+    CATEGORIES ||--o{ ARTICLES : "possui"
+    ARTICLES }o--|| CATEGORIES : "pertence a"

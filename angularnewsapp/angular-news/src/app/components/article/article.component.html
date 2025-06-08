@@ -1,0 +1,35 @@
+
+<ion-card class="article-card">
+  <div class="card-header">
+    <div class="source-container" (click)="openArticle()">
+      <span class="source-index">{{ index }}.</span>
+      <span class="source-name">{{ article.source.name }}</span>
+    </div>
+    
+    <ion-button fill="clear" class="menu-button" (click)="openMenu($event)">
+     <img src="../../../assets/icon/ellipsis-horizontal-outline.svg" width="20px" height="20px" />
+    </ion-button>
+  </div>
+
+  <div class="card-content" (click)="openArticle()">
+    <h3 class="article-title">{{ article.title }}</h3>
+    
+    <ion-img
+      *ngIf="article.urlToImage"
+      [src]="article.urlToImage"
+      class="article-image"
+      [alt]="article.title"
+    ></ion-img>
+    
+    <p class="article-description" *ngIf="article.description">
+      {{ article.description }}
+    </p>
+  </div>
+
+  <div class="card-footer">
+    <ion-button fill="clear" size="small" (click)="shareArticle()">
+      <ion-icon slot="center" name="share-social-outline"></ion-icon>
+      Compartilhar
+    </ion-button>
+  </div>
+</ion-card>

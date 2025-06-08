@@ -1,0 +1,39 @@
+<ion-header [translucent]="true" class="news-header">
+  <ion-toolbar>
+    <ion-title>Notícias</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToProfile()">
+        <i class="fa-solid fa-user"></i>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="news-content">
+
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content pullingText="Puxe para atualizar" refreshingSpinner="crescent">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <app-articles [articles]="articles"></app-articles>
+
+  <div *ngIf="articles.length === 0" class="no-articles">Nenhuma notícia encontrada.</div>
+
+  <ion-infinite-scroll threshold="25%" position="bottom" (ionInfinite)="loadData()">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Carregando...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <ion-toast
+    *ngIf="showToast"
+    [message]="toastMessage"
+    [color]="toastColor"
+    duration="3000"
+    position="bottom"
+    (didDismiss)="showToast = false">
+  </ion-toast>
+
+</ion-content>

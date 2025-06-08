@@ -1,0 +1,43 @@
+$primary-blue: #2563eb;
+$secondary-blue: #3b82f6;
+$white: #ffffff;
+$light-gray: #f3f4f6;
+$text-gray: #4b5563;
+
+.custom-tab-bar {
+  --background: #{$white};
+  border-top: 1px solid #e5e7eb;
+
+  ion-tab-button {
+    color: #{$text-gray};
+    --color-selected: #{$primary-blue};
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    i.tab-icon {
+      font-size: 20px;
+      margin-bottom: 4px;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    ion-label {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    &.tab-selected {
+      i.tab-icon,
+      ion-label {
+        color: #{$primary-blue};
+      }
+    }
+
+    &:hover {
+      background-color: #{$light-gray};
+    }
+  }
+}

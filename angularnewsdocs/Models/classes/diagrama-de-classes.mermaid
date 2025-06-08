@@ -1,0 +1,46 @@
+classDiagram
+    class Usuario {
+        +int id
+        +string username
+        +string email
+        +string password
+        +login()
+        +register()
+        +editarPerfil()
+    }
+
+    class Noticia {
+        +string sourceName
+        +string author
+        +string title
+        +string description
+        +string url
+        +string urlToImage
+        +Date publishedAt
+        +string content
+    }
+
+    class Favorito {
+        +int id
+        +int usuarioId
+        +string noticiaUrl
+        +adicionarFavorito()
+        +removerFavorito()
+    }
+
+    class Categoria {
+        +string nome
+    }
+
+    Usuario "1" -- "*" Favorito : possui
+    Favorito "*" -- "1" Noticia : referencia
+    Noticia "*" -- "1" Categoria : pertence
+
+    %% Adicionais
+    class Token {
+        +string token
+        +Date expiresAt
+    }
+    Usuario "1" -- "0..1" Token : autentica
+
+    %% Observação: O modelo privilegia a simplicidade, usando URL da notícia como chave para favoritos.

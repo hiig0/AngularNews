@@ -1,0 +1,141 @@
+.register-background {
+  --background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+
+.register-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: white;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 30px 20px;
+  text-align: center;
+  background: white;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+  color: #5e72e4;
+  margin-bottom: 8px;
+}
+
+.app-name {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #5e72e4;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.welcome-title {
+  color: #2d3748;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.welcome-subtitle {
+  color: #718096;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.input-list {
+  padding: 0;
+  background: transparent;
+}
+
+.input-item {
+  --background: #f7fafc;
+  --border-radius: 12px;
+  --padding-start: 16px;
+  --inner-padding-end: 16px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.input-icon {
+  color: #a0aec0;
+  margin-right: 12px;
+}
+
+.input-label {
+  color: #4a5568 !important;
+  font-weight: 500;
+  transform-origin: left center;
+}
+
+.custom-input {
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --color: #2d3748;
+}
+
+.actions-container {
+  margin-top: 30px;
+}
+
+.register-button {
+  --background: #5e72e4;
+  --background-activated: #4a56c8;
+  --background-hover: #4a56c8;
+  --border-radius: 12px;
+  --padding-top: 18px;
+  --padding-bottom: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.login-button {
+  --color: #5e72e4;
+  --background-activated: rgba(94, 114, 228, 0.1);
+  font-weight: 500;
+}
+
+/* Efeitos de foco */
+.input-item.item-interactive.ion-focused {
+  --background: #edf2f7;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .register-card {
+    border-radius: 0;
+    max-width: 100%;
+    min-height: 100%;
+    box-shadow: none;
+  }
+  
+  .register-container {
+    padding: 0;
+  }
+}

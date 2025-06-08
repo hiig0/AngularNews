@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profile-header">
+    <i class="fa-solid fa-user tab-icon"></i>
+    <h2>{{ userName }}</h2>
+    <p>{{ userEmail }}</p>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label><strong>Nome:</strong></ion-label>
+      <ion-text>{{ userName }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label><strong>Email:</strong></ion-label>
+      <ion-text>{{ userEmail }}</ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="danger" (click)="logout()">Logout</ion-button>
+  <ion-button expand="full" (click)="home()">Notícias</ion-button>
+</ion-content>
