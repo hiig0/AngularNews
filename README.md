@@ -293,9 +293,13 @@ Mais detalhes estão disponíveis no arquivo [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Autores
 
-- [Seu Nome](https://github.com/SEU_USUARIO)
-- [Colaboradores](#)
-
+- [Higor Ricardo - 01750407]
+- [Arnaldo Reis - 01747529](#)
+- [Emilly Mayra - 01752013]
+- [Carla Rayanne da Silva - 01751974]
+- [Gustavo Lopes - 01747917]
+- [Geovanny André Rodrigues de Lima - 01648245]
+  
 ---
 
 ## Licença
